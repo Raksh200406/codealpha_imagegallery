@@ -3,99 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raksh’s Real Photo Gallery</title>
+  <title>📸 Raksh’s Real Photo Gallery</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <h1>📸 Raksh’s Real Photo Gallery</h1>
-    <p>Memories, smiles, and moments captured beautifully 💫</p>
+    <p class="subtitle">Memories, smiles, and moments captured beautifully 💫</p>
+
+    <!-- Filter Buttons -->
+    <nav class="filters" aria-label="Image categories">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="friends">College Friends</button>
+      <button class="filter-btn" data-category="coding">Coding Moments</button>
+      <button class="filter-btn" data-category="food">Food Love</button>
+      <button class="filter-btn" data-category="sky">Sky Vibes</button>
+      <button class="filter-btn" data-category="city">City Lights</button>
+    </nav>
   </header>
 
-  <!-- 😊 College Friends -->
-  <h2>😊 College Friends</h2>
-  <section class="gallery">
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600" alt="Group of Friends Sitting Together">
-    </div>
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" alt="Group Photo">
-    </div>
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600" alt="Smiles and Selfies">
-    </div>
-  </section>
+  <main class="container">
+    <section class="gallery" id="gallery">
 
-  <!-- 💻 Coding Moments -->
-  <h2>💻 Coding Moments</h2>
-  <section class="gallery">
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600" alt="Laptop Coding Setup">
-    </div>
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600" alt="Coding at Night">
-    </div>
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600" alt="Web Developer Desk">
-    </div>
-  </section>
+      <!-- 😊 College Friends -->
+      <div class="image-card" data-category="friends">
+        <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=900" alt="Group of College Friends Laughing">
+        <div class="caption">College Friends Laughing</div>
+      </div>
 
-  <!-- 🍕 Food Love -->
-  <h2>🍕 Food Love</h2>
-  <section class="gallery">
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600" alt="Homemade Pizza">
-    </div>
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600" alt="Pasta Dish">
-    </div>
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600" alt="Dessert Bowl">
-    </div>
-  </section>
+      <div class="image-card" data-category="friends">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900" alt="Group Photo of Friends on Campus">
+        <div class="caption">Group Photo</div>
+      </div>
 
-  <!-- ☁️ Sky Vibes -->
-  <h2>☁️ Sky Vibes</h2>
-  <section class="gallery">
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600" alt="Evening Sky">
-    </div>
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Morning Clouds">
-    </div>
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?w=600" alt="Sunset Glow">
-    </div>
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600" alt="Cloudy Blue Sky">
-    </div>
-  </section>
+      <div class="image-card" data-category="friends">
+        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=900" alt="Friends Taking Selfie">
+        <div class="caption">Smiles & Selfies</div>
+      </div>
 
-  <!-- 🌆 City Lights -->
-  <h2>🌆 City Lights</h2>
-  <section class="gallery">
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=600" alt="City at Night">
-    </div>
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=600" alt="Traffic Streets">
-    </div>
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1494783367193-149034c05e8f?w=600" alt="Downtown Skyline">
-    </div>
-    <div class="image-card">
-      <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=600" alt="High-Rise Buildings">
-    </div>
-  </section>
+      <!-- 💻 Coding Moments -->
+      <div class="image-card" data-category="coding">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900" alt="Laptop Coding Setup">
+        <div class="caption">Laptop Coding Setup</div>
+      </div>
+
+      <div class="image-card" data-category="coding">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900" alt="Coding at Night">
+        <div class="caption">Coding at Night</div>
+      </div>
+
+      <div class="image-card" data-category="coding">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900" alt="Web Developer Desk">
+        <div class="caption">Web Dev Desk</div>
+      </div>
+
+      <!-- 🍕 Food Love -->
+      <div class="image-card" data-category="food">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=900" alt="Homemade Pizza">
+        <div class="caption">Homemade Pizza</div>
+      </div>
+
+      <div class="image-card" data-category="food">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=900" alt="Pasta Dish">
+        <div class="caption">Delicious Pasta</div>
+      </div>
+
+      <div class="image-card" data-category="food">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900" alt="Dessert Bowl">
+        <div class="caption">Dessert Bowl</div>
+      </div>
+
+      <!-- ☁️ Sky Vibes -->
+      <div class="image-card" data-category="sky">
+        <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=900" alt="Evening Sky">
+        <div class="caption">Evening Sky</div>
+      </div>
+
+      <div class="image-card" data-category="sky">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=900" alt="Morning Clouds">
+        <div class="caption">Morning Clouds</div>
+      </div>
+
+      <div class="image-card" data-category="sky">
+        <img src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?w=900" alt="Sunset Glow">
+        <div class="caption">Sunset Glow</div>
+      </div>
+
+      <!-- 🌆 City Lights -->
+      <div class="image-card" data-category="city">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=900" alt="City at Night">
+        <div class="caption">City at Night</div>
+      </div>
+
+      <div class="image-card" data-category="city">
+        <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=900" alt="Traffic Streets">
+        <div class="caption">Traffic Streets</div>
+      </div>
+
+      <div class="image-card" data-category="city">
+        <img src="https://images.unsplash.com/photo-1494783367193-149034c05e8f?w=900" alt="Downtown Skyline">
+        <div class="caption">Downtown Skyline</div>
+      </div>
+
+    </section>
+  </main>
 
   <!-- Lightbox -->
-  <div class="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-img" src="" alt="">
-    <div class="navigation">
-      <span class="prev">&#10094;</span>
-      <span class="next">&#10095;</span>
-    </div>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">&#10094;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next">&#10095;</button>
+    <div class="lb-caption" id="lbCaption"></div>
   </div>
 
   <script src="script.js"></script>
